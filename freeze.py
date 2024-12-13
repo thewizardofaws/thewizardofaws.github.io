@@ -1,0 +1,31 @@
+"""
+Frozen-Flask script to build static site into /build directory.
+"""
+from flask_frozen import Freezer
+from app import create_app
+
+# Create the Flask app instance
+app = create_app()
+
+# Initialize Frozen-Flask
+freezer = Freezer(app)
+
+
+@freezer.register_generator
+def page_generator():
+    """
+    Generator function for all pages that should be frozen.
+    This can be extended to include dynamic routes.
+    """
+    # Add any dynamic routes here
+    yield '/'
+    yield '/about'
+    yield '/blog'
+    yield '/contact'
+    yield '/projects'
+    yield '/podcast'
+    yield '/resources'
+
+
+if __name__ == '__main__':
+    freezer.freeze()
