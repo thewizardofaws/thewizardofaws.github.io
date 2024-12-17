@@ -204,7 +204,7 @@ a:active {
 }
 
 .text-muted {
-  color: var(--color-text-muted);
+  color: var(--color-text-muted) !important;
 }
 
 .bg-surface {
@@ -241,4 +241,35 @@ a:active {
   .border-aws-orange {
     border-color: var(--color-accent-primary);
   }
+}
+
+/* ============================================
+   Component Styles
+   ============================================ */
+.nav-link {
+  color: var(--color-text-primary);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-accent-primary);
+}
+
+.footer-link {
+  color: var(--color-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-accent-primary);
+}
+
+.brand-link {
+  color: var(--color-accent-primary);
+  font-family: var(--font-heading);
+  transition: color 0.2s ease;
+}
+
+.brand-link:hover {
+  color: var(--color-accent-hover);
 }
