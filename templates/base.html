@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Wizard of AWS - AWS Solutions Architect | DevOps Engineer | Cloud Innovator">
+    <title>{% block title %}The Wizard of AWS{% endblock %}</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-tech': '#0f172a',
+                        'text-primary': '#f8fafc',
+                        'text-secondary': '#cbd5e1',
+                        'text-muted': '#94a3b8',
+                        'aws-orange': '#ff9900',
+                        'aws-orange-hover': '#ffaa22',
+                        'border-color': '#1e293b',
+                        'surface': '#1e293b',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Design System CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Google Fonts - Inter for headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    {% block head %}{% endblock %}
+</head>
+<body class="bg-deep-tech text-text-primary min-h-screen flex flex-col" style="background-color: var(--color-bg-primary); color: var(--color-text-primary);">
+    <!-- Navigation Bar -->
+    <nav class="border-b sticky top-0 z-50 backdrop-blur-sm bg-opacity-90" style="border-color: var(--color-border); background-color: var(--color-surface);">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo/Brand -->
+                <div class="flex-shrink-0">
+                    <a href="{{ url_for('main.index') }}" class="text-xl font-bold brand-link">
+                        The Wizard of AWS
+                    </a>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="{{ url_for('main.index') }}#expertise" class="font-medium nav-link">
+                        Expertise
+                    </a>
+                    <a href="{{ url_for('main.blog') }}" class="font-medium nav-link">
+                        Writing
+                    </a>
+                    <a href="{{ url_for('main.projects') }}" class="font-medium nav-link">
+                        Projects
+                    </a>
+                    <a href="{{ url_for('main.index') }}#socials" class="font-medium nav-link">
+                        Socials
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none nav-link">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
+                <a href="{{ url_for('main.index') }}#expertise" class="block py-2 nav-link">
+                    Expertise
+                </a>
+                <a href="{{ url_for('main.blog') }}" class="block py-2 nav-link">
+                    Writing
+                </a>
+                <a href="{{ url_for('main.projects') }}" class="block py-2 nav-link">
+                    Projects
+                </a>
+                <a href="{{ url_for('main.index') }}#socials" class="block py-2 nav-link">
+                    Socials
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="border-t mt-auto" style="border-color: var(--color-border); background-color: var(--color-surface);">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <!-- Branding -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-lg font-bold mb-2 brand-link">
+                        The Wizard of AWS
+                    </h3>
+                    <p class="text-sm text-muted">
+                        AWS Solutions Architect | DevOps Engineer | Cloud Innovator
+                    </p>
+                </div>
+                
+                <!-- Footer Links -->
+                <div class="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
+                    <a href="{{ url_for('main.about') }}" class="footer-link">
+                        About
+                    </a>
+                    <a href="{{ url_for('main.contact') }}" class="footer-link">
+                        Contact
+                    </a>
+                    <a href="{{ url_for('main.resources') }}" class="footer-link">
+                        Resources
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="mt-6 pt-6 border-t text-center" style="border-color: var(--color-border);">
+                <p class="text-xs text-muted">
+                    &copy; 2024 The Wizard of AWS. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>
