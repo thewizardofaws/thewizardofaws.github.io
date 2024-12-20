@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}The Wizard of AWS - AWS Solutions Architect | DevOps Engineer{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section py-16 sm:py-24 lg:py-32">
+    <div class="text-center">
+        <!-- High-Contrast Headline -->
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight" style="color: var(--color-text-primary); font-family: var(--font-heading); letter-spacing: -0.03em;">
+            The Wizard of AWS
+        </h1>
+        
+        <!-- Punchy Sub-headline -->
+        <p class="text-xl sm:text-2xl lg:text-3xl font-medium mb-8 max-w-3xl mx-auto leading-relaxed" style="color: var(--color-text-secondary); font-family: var(--font-heading);">
+            Subject Matter Expert in Cloud Architecture.<br>
+            Transforming complex AWS infrastructure into elegant, scalable solutions.
+        </p>
+        
+        <!-- Call to Action Area -->
+        <div class="mt-12 space-y-6">
+            <div class="inline-block">
+                <a href="https://thewizardofaws.substack.com" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn text-lg px-8 py-4 font-semibold shadow-lg hover:shadow-glow transition-all duration-300">
+                    Read Latest on Substack
+                </a>
+            </div>
+            <p class="text-sm text-muted max-w-md mx-auto">
+                Deep insights on AWS architecture, DevOps practices, and cloud innovation.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Expertise Section Anchor -->
+<section id="expertise" class="py-16 border-t" style="border-color: var(--color-border);">
+    <div class="text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+            Expertise
+        </h2>
+        <p class="text-lg text-muted max-w-2xl mx-auto">
+            Specialized knowledge in AWS cloud architecture, distributed systems, and serverless solutions.
+        </p>
+    </div>
+</section>
+
+<!-- Socials Section Anchor -->
+<section id="socials" class="py-16 border-t" style="border-color: var(--color-border);">
+    <div class="text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+            Connect
+        </h2>
+        <p class="text-lg text-muted max-w-2xl mx-auto">
+            Follow along for AWS insights, tutorials, and cloud architecture discussions.
+        </p>
+    </div>
+</section>
+{% endblock %}
