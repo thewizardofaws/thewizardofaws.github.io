@@ -21,6 +21,7 @@ def page_generator():
     yield '/'
     yield '/about'
     yield '/blog'
+    yield '/writing'
     yield '/contact'
     yield '/projects'
     yield '/podcast'
