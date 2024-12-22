@@ -307,3 +307,29 @@ a:active {
 .hero-section .btn:hover::before {
   left: 100%;
 }
+
+/* ============================================
+   Article Card Styles
+   ============================================ */
+.article-card {
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.article-card:hover {
+  background-color: var(--color-surface);
+  border-color: var(--color-accent-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.article-card a {
+  text-decoration: none;
+}
+
+.article-card h3 {
+  transition: color 0.2s ease;
+}
