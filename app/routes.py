@@ -24,6 +24,12 @@ def blog():
     return render_template('blog.html')
 
 
+@main_bp.route('/writing')
+def writing():
+    """Writing feed page route."""
+    return render_template('writing.html')
+
+
 @main_bp.route('/contact')
 def contact():
     """Contact page route."""
