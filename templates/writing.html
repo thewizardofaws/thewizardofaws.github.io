@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+
+{% block title %}Writing - The Wizard of AWS{% endblock %}
+
+{% block content %}
+<!-- Writing Feed Header -->
+<header class="mb-12 text-center">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+        Writing
+    </h1>
+    <p class="text-lg text-muted max-w-2xl mx-auto">
+        Insights on AWS architecture, DevOps practices, and cloud innovation.
+    </p>
+</header>
+
+<!-- Writing Feed -->
+<div class="space-y-12">
+    <!-- Substack Section -->
+    <section>
+        <div class="mb-6 pb-3 border-b" style="border-color: var(--color-border);">
+            <h2 class="text-2xl font-bold" style="color: var(--color-accent-primary); font-family: var(--font-heading);">
+                Substack
+            </h2>
+            <p class="text-sm text-muted mt-1">Long-form articles and deep dives</p>
+        </div>
+        
+        <div class="space-y-6">
+            <!-- Article Card Example -->
+            <article class="article-card group">
+                <a href="https://thewizardofaws.substack.com/p/example-post" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="block">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-xl sm:text-2xl font-bold mb-3 group-hover:text-accent-aws-orange transition-colors" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                                Building Scalable Serverless Architectures on AWS
+                            </h3>
+                            <p class="text-base text-muted mb-4 leading-relaxed">
+                                A comprehensive guide to designing and implementing serverless solutions that scale with your business needs, covering Lambda, API Gateway, and event-driven patterns.
+                            </p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-muted">
+                                <span class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    December 15, 2024
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                                    </svg>
+                                    Substack
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    8 min read
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <svg class="w-6 h-6 text-muted group-hover:text-accent-aws-orange transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            <!-- Add more Substack articles here -->
+        </div>
+    </section>
+    
+    <!-- Medium Section -->
+    <section>
+        <div class="mb-6 pb-3 border-b" style="border-color: var(--color-border);">
+            <h2 class="text-2xl font-bold" style="color: var(--color-accent-primary); font-family: var(--font-heading);">
+                Medium
+            </h2>
+            <p class="text-sm text-muted mt-1">Technical tutorials and quick insights</p>
+        </div>
+        
+        <div class="space-y-6">
+            <!-- Article Card Example -->
+            <article class="article-card group">
+                <a href="https://medium.com/@thewizardofaws/example-post" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="block">
+                    <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                        <div class="flex-1">
+                            <h3 class="text-xl sm:text-2xl font-bold mb-3 group-hover:text-accent-aws-orange transition-colors" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                                Terraform Best Practices for AWS Infrastructure
+                            </h3>
+                            <p class="text-base text-muted mb-4 leading-relaxed">
+                                Learn how to structure your Terraform code for maintainability, implement proper state management, and follow AWS best practices for infrastructure as code.
+                            </p>
+                            <div class="flex flex-wrap items-center gap-4 text-sm text-muted">
+                                <span class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    December 10, 2024
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                                    </svg>
+                                    Medium
+                                </span>
+                                <span class="flex items-center gap-1">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    5 min read
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <svg class="w-6 h-6 text-muted group-hover:text-accent-aws-orange transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            
+            <!-- Add more Medium articles here -->
+        </div>
+    </section>
+</div>
+{% endblock %}
