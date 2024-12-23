@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block title %}Expertise - The Wizard of AWS{% endblock %}
+
+{% block head %}
+<!-- Lucide Icons CDN -->
+<script src="https://unpkg.com/lucide@latest"></script>
+{% endblock %}
+
+{% block content %}
+<!-- Expertise Header -->
+<header class="mb-16 text-center">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+        Expertise
+    </h1>
+    <p class="text-lg text-muted max-w-2xl mx-auto">
+        Decades of experience distilled into core competencies that drive real business outcomes at scale.
+    </p>
+</header>
+
+<!-- Pillars of Excellence Grid -->
+<section class="expertise-grid">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Pillar 1: Serverless Architecture -->
+        <article class="expertise-pillar">
+            <div class="pillar-icon mb-6">
+                <i data-lucide="zap" class="w-12 h-12" style="color: var(--color-accent-primary);"></i>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                Serverless Architecture
+            </h2>
+            <p class="text-base text-muted leading-relaxed mb-4">
+                Building event-driven, fully managed architectures that eliminate infrastructure overhead and scale automatically from zero to millions of requests. I've architected serverless solutions that reduced operational costs by 70% while improving time-to-market by 60%.
+            </p>
+            <div class="pillar-value">
+                <p class="text-sm font-semibold" style="color: var(--color-accent-primary);">
+                    Business Value: Reduced infrastructure costs by 70%, faster deployment cycles, zero server management overhead.
+                </p>
+            </div>
+            <div class="pillar-scale mt-4">
+                <p class="text-sm text-muted">
+                    <strong>Scale:</strong> Designed systems handling 10M+ requests/day with sub-100ms latency, auto-scaling from zero to peak capacity in seconds.
+                </p>
+            </div>
+        </article>
+
+        <!-- Pillar 2: Cost Optimization -->
+        <article class="expertise-pillar">
+            <div class="pillar-icon mb-6">
+                <i data-lucide="trending-down" class="w-12 h-12" style="color: var(--color-accent-primary);"></i>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                Cost Optimization
+            </h2>
+            <p class="text-base text-muted leading-relaxed mb-4">
+                Systematic approach to cloud cost management that goes beyond right-sizing. I implement FinOps practices that align cloud spending with business value, using reserved instances, spot fleets, and intelligent resource scheduling to achieve 40-60% cost reductions without sacrificing performance.
+            </p>
+            <div class="pillar-value">
+                <p class="text-sm font-semibold" style="color: var(--color-accent-primary);">
+                    Business Value: Average 50% reduction in cloud spend, improved ROI on cloud investments, predictable cost forecasting.
+                </p>
+            </div>
+            <div class="pillar-scale mt-4">
+                <p class="text-sm text-muted">
+                    <strong>Scale:</strong> Managed cost optimization for environments spending $500K-$5M annually, achieving consistent savings across 100+ services.
+                </p>
+            </div>
+        </article>
+
+        <!-- Pillar 3: Security & Compliance -->
+        <article class="expertise-pillar">
+            <div class="pillar-icon mb-6">
+                <i data-lucide="shield-check" class="w-12 h-12" style="color: var(--color-accent-primary);"></i>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                Security & Compliance
+            </h2>
+            <p class="text-base text-muted leading-relaxed mb-4">
+                Defense-in-depth security architectures that meet SOC 2, HIPAA, and PCI-DSS requirements. I design zero-trust networks, implement least-privilege IAM policies, and automate security scanning to maintain compliance at scale while enabling rapid development cycles.
+            </p>
+            <div class="pillar-value">
+                <p class="text-sm font-semibold" style="color: var(--color-accent-primary);">
+                    Business Value: Reduced security incidents by 90%, faster compliance audits, enabled secure multi-tenant architectures.
+                </p>
+            </div>
+            <div class="pillar-scale mt-4">
+                <p class="text-sm text-muted">
+                    <strong>Scale:</strong> Secured environments processing millions of transactions daily, maintaining 99.99% uptime while meeting strict compliance requirements.
+                </p>
+            </div>
+        </article>
+
+        <!-- Pillar 4: Distributed Systems -->
+        <article class="expertise-pillar">
+            <div class="pillar-icon mb-6">
+                <i data-lucide="network" class="w-12 h-12" style="color: var(--color-accent-primary);"></i>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold mb-4" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                Distributed Systems
+            </h2>
+            <p class="text-base text-muted leading-relaxed mb-4">
+                Architecting highly available, fault-tolerant systems that span multiple regions and availability zones. I design for failure, implement circuit breakers, and build systems that gracefully degrade under load, ensuring business continuity even during regional outages.
+            </p>
+            <div class="pillar-value">
+                <p class="text-sm font-semibold" style="color: var(--color-accent-primary);">
+                    Business Value: 99.99% uptime SLA, zero-downtime deployments, global low-latency access, disaster recovery in minutes.
+                </p>
+            </div>
+            <div class="pillar-scale mt-4">
+                <p class="text-sm text-muted">
+                    <strong>Scale:</strong> Designed multi-region architectures serving 50M+ users globally, with automatic failover and sub-second recovery times.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Initialize Lucide Icons -->
+<script>
+    lucide.createIcons();
+</script>
+{% endblock %}
