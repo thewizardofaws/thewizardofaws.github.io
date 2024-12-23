@@ -52,3 +52,9 @@ def podcast():
 def resources():
     """Resources page route."""
     return render_template('resources.html')
+
+
+@main_bp.route('/expertise')
+def expertise():
+    """Expertise page route."""
+    return render_template('expertise.html')
