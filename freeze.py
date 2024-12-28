@@ -27,6 +27,7 @@ def page_generator():
     yield '/projects'
     yield '/podcast'
     yield '/resources'
+    yield '/socials'
 
 
 if __name__ == '__main__':
