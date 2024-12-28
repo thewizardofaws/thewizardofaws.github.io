@@ -58,3 +58,9 @@ def resources():
 def expertise():
     """Expertise page route."""
     return render_template('expertise.html')
+
+
+@main_bp.route('/socials')
+def socials():
+    """Social media hub page route."""
+    return render_template('socials.html')
