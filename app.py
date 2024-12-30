@@ -34,7 +34,8 @@ def create_app(config=None):
     app.pages = pages
     
     # Register blueprints/routes here
-    from app.routes import main_bp
+    from app.routes import main_bp, register_pages
+    register_pages(pages)
     app.register_blueprint(main_bp)
     
     return app
