@@ -1,9 +1,17 @@
 """
 Main routes for The Wizard of AWS portfolio site.
 """
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, abort
+from flask_flatpages import FlatPages
 
 main_bp = Blueprint('main', __name__)
+pages = None  # Will be initialized in register_pages
+
+
+def register_pages(flatpages_instance):
+    """Register FlatPages instance with the blueprint."""
+    global pages
+    pages = flatpages_instance
 
 
 @main_bp.route('/')
@@ -64,3 +72,15 @@ def expertise():
 def socials():
     """Social media hub page route."""
     return render_template('socials.html')
+
+
+@main_bp.route('/writing/<path:path>')
+def writing_page(path):
+    """Dynamic route for rendering Markdown files from pages directory."""
+    if pages is None:
+        abort(500, "FlatPages not initialized")
+    
+    # Get the page from FlatPages
+    page = pages.get_or_404(path)
+    
+    return render_template('writing_page.html', page=page)
