@@ -17,7 +17,7 @@ def page_generator():
     Generator function for all pages that should be frozen.
     This can be extended to include dynamic routes.
     """
-    # Add any dynamic routes here
+    # Static routes
     yield '/'
     yield '/about'
     yield '/blog'
@@ -28,6 +28,10 @@ def page_generator():
     yield '/podcast'
     yield '/resources'
     yield '/socials'
+    
+    # Dynamic routes for Markdown pages
+    for page in app.pages:
+        yield {'path': f'/writing/{page.path}'}
 
 
 if __name__ == '__main__':
