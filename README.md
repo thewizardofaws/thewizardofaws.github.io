@@ -127,4 +127,4 @@ I'm KC Tyler, a Senior DevOps Engineer specializing in AWS cloud architecture, P
 
 ## License
 
-All rights reserved. © 2024 The Wizard of AWS
+All rights reserved. © 2025 The Wizard of AWS
