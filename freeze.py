@@ -1,8 +1,42 @@
 """
 Frozen-Flask script to build static site into /build directory.
 """
+import sys
+import os
+# Add current directory to path
+sys.path.insert(0, os.path.dirname(__file__))
+
+# Workaround for Werkzeug 3.x compatibility
+try:
+    from werkzeug.routing import Map
+    if not hasattr(Map, 'charset'):
+        Map.charset = 'utf-8'
+except (ImportError, AttributeError):
+    pass
+
+# Monkeypatch for Frozen-Flask 0.18 compatibility with Flask 3.x
+import flask_frozen
+original_static_rules_endpoints = flask_frozen.Freezer._static_rules_endpoints
+def patched_static_rules_endpoints(self):
+    """Patched version that works with Flask 3.x"""
+    endpoints = set()
+    for rule in self.app.url_map.iter_rules():
+        if rule.endpoint == 'static':
+            endpoints.add(rule.endpoint)
+    return endpoints
+flask_frozen.Freezer._static_rules_endpoints = patched_static_rules_endpoints
+
+# Import app.py as a module
+import importlib.util
+app_py_path = os.path.join(os.path.dirname(__file__), 'app.py')
+spec = importlib.util.spec_from_file_location("app_py", app_py_path)
+app_py = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(app_py)
+
 from flask_frozen import Freezer
-from app import create_app
+
+# Get create_app from the imported module
+create_app = app_py.create_app
 
 # Create the Flask app instance
 app = create_app()
@@ -31,7 +65,7 @@ def page_generator():
     
     # Dynamic routes for Markdown pages
     for page in app.pages:
-        yield {'path': f'/writing/{page.path}'}
+        yield f'/writing/{page.path}'
 
 
 if __name__ == '__main__':
