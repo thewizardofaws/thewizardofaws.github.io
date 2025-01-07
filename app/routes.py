@@ -16,7 +16,7 @@ def register_pages(flatpages_instance):
 
 @main_bp.route('/')
 def index():
-    """Home page route."""
+    """Home page route - The central hub for 'The Wizard of AWS'."""
     return render_template('index.html')
 
 
@@ -34,7 +34,7 @@ def blog():
 
 @main_bp.route('/writing')
 def writing():
-    """Writing feed page route."""
+    """Blog page route - Integration of Substack and Medium feeds."""
     return render_template('writing.html')
 
 
@@ -46,7 +46,7 @@ def contact():
 
 @main_bp.route('/projects')
 def projects():
-    """Projects page route."""
+    """Portfolio page route - Deep dives into technical repositories and architectures."""
     return render_template('projects.html')
 
 
@@ -70,7 +70,7 @@ def expertise():
 
 @main_bp.route('/socials')
 def socials():
-    """Social media hub page route."""
+    """Contact Me page route - Professional landing spot for inquiries and social links."""
     return render_template('socials.html')
 
 
