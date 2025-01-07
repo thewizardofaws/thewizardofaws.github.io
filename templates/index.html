@@ -34,27 +34,76 @@
     </div>
 </section>
 
-<!-- Expertise Section Anchor -->
-<section id="expertise" class="py-16 border-t" style="border-color: var(--color-border);">
-    <div class="text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4" style="color: var(--color-text-primary); font-family: var(--font-heading);">
-            Expertise
+<!-- Expertise Summary Section -->
+<section class="py-16 border-t" style="border-color: var(--color-border);">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+            Core Expertise
         </h2>
-        <p class="text-lg text-muted max-w-2xl mx-auto">
-            Specialized knowledge in AWS cloud architecture, distributed systems, and serverless solutions.
-        </p>
+        <div class="space-y-6 text-lg" style="color: var(--color-text-secondary);">
+            <p>
+                With decades of experience in cloud architecture, I specialize in designing and implementing AWS solutions that drive real business outcomes. My expertise spans serverless architectures, cost optimization, security compliance, and distributed systems at scale.
+            </p>
+            <p>
+                I've architected systems handling millions of requests daily, reduced cloud costs by 50-70% for enterprise clients, and maintained 99.99% uptime SLAs across multi-region deployments. My approach combines deep technical knowledge with a focus on business value and operational excellence.
+            </p>
+            <div class="mt-8 text-center">
+                <a href="{{ url_for('main.expertise') }}" class="btn-outline">
+                    Explore Full Expertise
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- Socials Section Anchor -->
-<section id="socials" class="py-16 border-t" style="border-color: var(--color-border);">
-    <div class="text-center">
-        <h2 class="text-3xl sm:text-4xl font-bold mb-4" style="color: var(--color-text-primary); font-family: var(--font-heading);">
-            Connect
+<!-- Selected Works Section -->
+<section class="py-16 border-t" style="border-color: var(--color-border);">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-8 text-center" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+            Selected Works
         </h2>
-        <p class="text-lg text-muted max-w-2xl mx-auto">
-            Follow along for AWS insights, tutorials, and cloud architecture discussions.
-        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <!-- Featured Project 1 -->
+            <div class="p-6 rounded-lg" style="background-color: var(--color-surface); border: 1px solid var(--color-border);">
+                <h3 class="text-xl font-bold mb-3" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                    AWS Cost Estimator
+                </h3>
+                <p class="text-muted mb-4">
+                    Comprehensive tool for estimating AWS infrastructure costs across multiple services, helping teams make informed decisions about resource allocation.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Terraform</span>
+                    <span class="tech-tag">AWS</span>
+                </div>
+                <a href="{{ url_for('main.projects') }}" class="text-sm font-medium" style="color: var(--color-accent-primary);">
+                    View Project →
+                </a>
+            </div>
+            
+            <!-- Featured Project 2 -->
+            <div class="p-6 rounded-lg" style="background-color: var(--color-surface); border: 1px solid var(--color-border);">
+                <h3 class="text-xl font-bold mb-3" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                    Serverless Framework Templates
+                </h3>
+                <p class="text-muted mb-4">
+                    Production-ready Serverless Framework templates for common serverless patterns, including API Gateway, Lambda, and DynamoDB architectures.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Serverless</span>
+                </div>
+                <a href="{{ url_for('main.projects') }}" class="text-sm font-medium" style="color: var(--color-accent-primary);">
+                    View Project →
+                </a>
+            </div>
+        </div>
+        <div class="text-center">
+            <a href="{{ url_for('main.projects') }}" class="btn-outline">
+                View All Projects
+            </a>
+        </div>
     </div>
 </section>
 {% endblock %}
