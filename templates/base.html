@@ -75,17 +75,17 @@
                 
                 <!-- Navigation Links -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="{{ url_for('main.expertise') }}" class="font-medium nav-link">
-                        Expertise
-                    </a>
-                    <a href="{{ url_for('main.writing') }}" class="font-medium nav-link">
-                        Writing
+                    <a href="{{ url_for('main.index') }}" class="font-medium nav-link">
+                        Home
                     </a>
                     <a href="{{ url_for('main.projects') }}" class="font-medium nav-link">
-                        Projects
+                        Portfolio
+                    </a>
+                    <a href="{{ url_for('main.writing') }}" class="font-medium nav-link">
+                        Blog
                     </a>
                     <a href="{{ url_for('main.socials') }}" class="font-medium nav-link">
-                        Socials
+                        Contact Me
                     </a>
                 </div>
                 
@@ -99,17 +99,17 @@
             
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
-                <a href="{{ url_for('main.expertise') }}" class="block py-2 nav-link">
-                    Expertise
-                </a>
-                <a href="{{ url_for('main.writing') }}" class="block py-2 nav-link">
-                    Writing
+                <a href="{{ url_for('main.index') }}" class="block py-2 nav-link">
+                    Home
                 </a>
                 <a href="{{ url_for('main.projects') }}" class="block py-2 nav-link">
-                    Projects
+                    Portfolio
+                </a>
+                <a href="{{ url_for('main.writing') }}" class="block py-2 nav-link">
+                    Blog
                 </a>
                 <a href="{{ url_for('main.socials') }}" class="block py-2 nav-link">
-                    Socials
+                    Contact Me
                 </a>
             </div>
         </div>
@@ -138,14 +138,17 @@
                 
                 <!-- Footer Links -->
                 <div class="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
-                    <a href="{{ url_for('main.about') }}" class="footer-link">
-                        About
+                    <a href="{{ url_for('main.index') }}" class="footer-link">
+                        Home
                     </a>
-                    <a href="{{ url_for('main.contact') }}" class="footer-link">
-                        Contact
+                    <a href="{{ url_for('main.projects') }}" class="footer-link">
+                        Portfolio
                     </a>
-                    <a href="{{ url_for('main.resources') }}" class="footer-link">
-                        Resources
+                    <a href="{{ url_for('main.writing') }}" class="footer-link">
+                        Blog
+                    </a>
+                    <a href="{{ url_for('main.socials') }}" class="footer-link">
+                        Contact Me
                     </a>
                 </div>
             </div>
