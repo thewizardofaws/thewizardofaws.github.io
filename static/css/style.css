@@ -558,6 +558,52 @@ a:active {
 }
 
 /* ============================================
+   Email Link Styles
+   ============================================ */
+.email-link {
+  color: var(--color-text-secondary);
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  color: var(--color-accent-primary);
+}
+
+.email-link svg {
+  transition: transform 0.2s ease;
+}
+
+.email-link:hover svg {
+  transform: scale(1.1);
+}
+
+/* ============================================
+   Footer Social Icon Styles
+   ============================================ */
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-text-muted);
+  transition: all 0.2s ease;
+  border-radius: var(--radius-md);
+}
+
+.footer-social-icon:hover {
+  color: var(--color-accent-primary);
+  background-color: var(--color-surface);
+  transform: translateY(-2px);
+}
+
+.footer-social-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* ============================================
    Writing Page / Markdown Content Styles
    ============================================ */
 .writing-page {
