@@ -33,6 +33,7 @@ def blog():
 
 
 @main_bp.route('/writing')
+@main_bp.route('/writing/')
 def writing():
     """Blog page route - Integration of Substack and Medium feeds."""
     return render_template('writing.html')
