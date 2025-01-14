@@ -49,13 +49,19 @@ app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_REMOVE_EXTRA_INDICES'] = False
 app.config['FREEZER_DEFAULT_MIMETYPE'] = 'text/html'
 
-# Initialize Frozen-Flask
+# Initialize Frozen-Flask with custom URL builder to handle directory conflicts
 freezer = Freezer(app)
 
-# Configure freezer to use directory-based routing (index.html files)
-freezer.config['FREEZER_DESTINATION_IGNORE'] = ['.git*']
-freezer.config['FREEZER_RELATIVE_URLS'] = True
-freezer.config['FREEZER_REMOVE_EXTRA_INDICES'] = False
+# Override the URL builder to ensure directory structure for routes with sub-paths
+def url_for_writing_index():
+    """Generate /writing/ URL to ensure directory structure"""
+    return '/writing/'
+
+# Register a custom generator that handles the /writing conflict
+@freezer.register_generator
+def writing_index_generator():
+    """Generate /writing/ as a directory to avoid conflict with /writing/<path>"""
+    yield '/writing/'
 
 
 @freezer.register_generator
@@ -64,19 +70,14 @@ def page_generator():
     Generator function for all pages that should be frozen.
     This can be extended to include dynamic routes.
     """
-    # Static routes
+    # Static routes - only yield routes that actually exist
     yield '/'
-    yield '/about'
-    yield '/blog'
-    yield '/writing'
-    yield '/expertise'
-    yield '/contact'
     yield '/projects'
-    yield '/podcast'
-    yield '/resources'
+    # Note: /writing/ is handled by writing_index_generator to avoid conflicts
     yield '/socials'
     
     # Dynamic routes for Markdown pages
+    # These will become build/writing/<path>/index.html
     for page in app.pages:
         yield f'/writing/{page.path}'
 
