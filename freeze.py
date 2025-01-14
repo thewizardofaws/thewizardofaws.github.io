@@ -41,8 +41,21 @@ create_app = app_py.create_app
 # Create the Flask app instance
 app = create_app()
 
+# Configure Frozen-Flask for directory-based routing
+# This ensures routes like /writing become build/writing/index.html
+# instead of build/writing (which conflicts with /writing/<path> sub-pages)
+app.config['FREEZER_DESTINATION_IGNORE'] = ['.git*']
+app.config['FREEZER_RELATIVE_URLS'] = True
+app.config['FREEZER_REMOVE_EXTRA_INDICES'] = False
+app.config['FREEZER_DEFAULT_MIMETYPE'] = 'text/html'
+
 # Initialize Frozen-Flask
 freezer = Freezer(app)
+
+# Configure freezer to use directory-based routing (index.html files)
+freezer.config['FREEZER_DESTINATION_IGNORE'] = ['.git*']
+freezer.config['FREEZER_RELATIVE_URLS'] = True
+freezer.config['FREEZER_REMOVE_EXTRA_INDICES'] = False
 
 
 @freezer.register_generator
