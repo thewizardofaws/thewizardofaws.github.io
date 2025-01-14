@@ -49,19 +49,8 @@ app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_REMOVE_EXTRA_INDICES'] = False
 app.config['FREEZER_DEFAULT_MIMETYPE'] = 'text/html'
 
-# Initialize Frozen-Flask with custom URL builder to handle directory conflicts
+# Initialize Frozen-Flask
 freezer = Freezer(app)
-
-# Override the URL builder to ensure directory structure for routes with sub-paths
-def url_for_writing_index():
-    """Generate /writing/ URL to ensure directory structure"""
-    return '/writing/'
-
-# Register a custom generator that handles the /writing conflict
-@freezer.register_generator
-def writing_index_generator():
-    """Generate /writing/ as a directory to avoid conflict with /writing/<path>"""
-    yield '/writing/'
 
 
 @freezer.register_generator
@@ -73,7 +62,7 @@ def page_generator():
     # Static routes - only yield routes that actually exist
     yield '/'
     yield '/projects'
-    # Note: /writing/ is handled by writing_index_generator to avoid conflicts
+    yield '/writing/'  # Use trailing slash to ensure directory structure (build/writing/index.html)
     yield '/socials'
     
     # Dynamic routes for Markdown pages
