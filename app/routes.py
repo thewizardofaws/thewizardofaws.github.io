@@ -20,7 +20,6 @@ def index():
     return render_template('index.html')
 
 
-@main_bp.route('/projects')
 @main_bp.route('/projects/')
 def projects():
     """Portfolio page route - Deep dives into technical repositories and architectures."""
@@ -33,7 +32,6 @@ def writing():
     return render_template('writing.html')
 
 
-@main_bp.route('/socials')
 @main_bp.route('/socials/')
 def socials():
     """Contact Me page route - Professional landing spot for inquiries and social links."""
