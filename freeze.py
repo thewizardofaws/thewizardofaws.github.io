@@ -42,8 +42,9 @@ create_app = app_py.create_app
 app = create_app()
 
 # Configure Frozen-Flask for directory-based routing
-# This ensures routes like /writing become build/writing/index.html
-# instead of build/writing (which conflicts with /writing/<path> sub-pages)
+# This ensures ALL routes are generated as directories containing index.html files
+# Example: /writing becomes build/writing/index.html (not build/writing)
+# This prevents FileExistsError when /writing and /writing/<path> both exist
 app.config['FREEZER_DESTINATION_IGNORE'] = ['.git*']
 app.config['FREEZER_RELATIVE_URLS'] = True
 app.config['FREEZER_REMOVE_EXTRA_INDICES'] = False
@@ -57,18 +58,19 @@ freezer = Freezer(app)
 def page_generator():
     """
     Generator function for all pages that should be frozen.
-    This can be extended to include dynamic routes.
+    All routes are yielded with trailing slashes to ensure directory structure.
     """
-    # Static routes - only yield routes that actually exist
+    # Static routes - all with trailing slashes to ensure directory structure
+    # This ensures: / -> build/index.html, /projects -> build/projects/index.html, etc.
     yield '/'
-    yield '/projects'
-    yield '/writing/'  # Use trailing slash to ensure directory structure (build/writing/index.html)
-    yield '/socials'
+    yield '/projects/'
+    yield '/writing/'  # Directory structure prevents conflict with /writing/<path> sub-pages
+    yield '/socials/'
     
     # Dynamic routes for Markdown pages
     # These will become build/writing/<path>/index.html
     for page in app.pages:
-        yield f'/writing/{page.path}'
+        yield f'/writing/{page.path}/'
 
 
 if __name__ == '__main__':
