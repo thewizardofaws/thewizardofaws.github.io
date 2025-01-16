@@ -71,7 +71,9 @@ def page_generator():
     
     # Dynamic routes for Markdown pages
     # These will become build/writing/<path>/index.html
+    # Note: Flask-FlatPages paths don't include the .md extension
     for page in app.pages:
+        # Yield with trailing slash to ensure directory structure
         yield f'/writing/{page.path}/'
 
 
