@@ -27,7 +27,6 @@ def projects():
     return render_template('projects.html')
 
 
-@main_bp.route('/writing')
 @main_bp.route('/writing/')
 def writing():
     """Blog page route - Integration of Substack and Medium feeds."""
@@ -41,7 +40,6 @@ def socials():
     return render_template('socials.html')
 
 
-@main_bp.route('/writing/<path:path>')
 @main_bp.route('/writing/<path:path>/')
 def writing_page(path):
     """Dynamic route for rendering Markdown files from pages directory."""
