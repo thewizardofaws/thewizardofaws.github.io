@@ -1,7 +1,6 @@
 ---
-title: "Mastering AWS Architecture"
+title: "Mastering AWS Cloud Architecture"
 date: 2026-01-21
-summary: "A deep dive into scalable cloud solutions."
+summary: "An introduction to the Wizard of AWS portfolio."
 ---
-
-This is a sample article to ensure the build pipeline functions correctly.
+Welcome to the Wizard of AWS. This post confirms the build pipeline is active.
