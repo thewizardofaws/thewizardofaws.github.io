@@ -42,6 +42,7 @@ def socials():
 
 
 @main_bp.route('/writing/<path:path>')
+@main_bp.route('/writing/<path:path>/')
 def writing_page(path):
     """Dynamic route for rendering Markdown files from pages directory."""
     if pages is None:
