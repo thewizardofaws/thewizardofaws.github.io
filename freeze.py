@@ -58,11 +58,13 @@ freezer = Freezer(app)
 def page_generator():
     """
     Generator function for all pages that should be frozen.
-    All routes are yielded with trailing slashes to ensure directory structure.
+    Routes are yielded to ensure directory structure with index.html files.
     """
-    # Static routes - all with trailing slashes to ensure directory structure
-    # This ensures: / -> build/index.html, /projects -> build/projects/index.html, etc.
+    # Root route - no trailing slash (becomes build/index.html)
     yield '/'
+    
+    # Static routes with trailing slashes to ensure directory structure
+    # This ensures: /projects -> build/projects/index.html, etc.
     yield '/projects/'
     yield '/writing/'  # Directory structure prevents conflict with /writing/<path> sub-pages
     yield '/socials/'
