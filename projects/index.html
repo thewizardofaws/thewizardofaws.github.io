@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Wizard of AWS - AWS Solutions Architect | DevOps Engineer | Cloud Innovator">
-    <title>Resources - The Wizard of AWS</title>
+    <title>Portfolio - The Wizard of AWS</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="../static/favicon.svg">
     
     <!-- SEO Meta Tags -->
     <meta name="author" content="KC Tyler">
@@ -52,7 +52,7 @@
     </script>
     
     <!-- Custom Design System CSS -->
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     
     <!-- Google Fonts - Inter for headings -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,23 +68,23 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo/Brand -->
                 <div class="flex-shrink-0">
-                    <a href="index.html" class="text-xl font-bold brand-link">
+                    <a href="../index.html" class="text-xl font-bold brand-link">
                         The Wizard of AWS
                     </a>
                 </div>
                 
                 <!-- Navigation Links -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="font-medium nav-link">
+                    <a href="../index.html" class="font-medium nav-link">
                         Home
                     </a>
-                    <a href="projects" class="font-medium nav-link">
+                    <a href="index.html" class="font-medium nav-link">
                         Portfolio
                     </a>
-                    <a href="writing/index.html" class="font-medium nav-link">
+                    <a href="../writing/index.html" class="font-medium nav-link">
                         Blog
                     </a>
-                    <a href="socials" class="font-medium nav-link">
+                    <a href="../socials/index.html" class="font-medium nav-link">
                         Contact Me
                     </a>
                     <!-- Direct Contact Email -->
@@ -107,16 +107,16 @@
             
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2">
-                <a href="index.html" class="block py-2 nav-link">
+                <a href="../index.html" class="block py-2 nav-link">
                     Home
                 </a>
-                <a href="projects" class="block py-2 nav-link">
+                <a href="index.html" class="block py-2 nav-link">
                     Portfolio
                 </a>
-                <a href="writing/index.html" class="block py-2 nav-link">
+                <a href="../writing/index.html" class="block py-2 nav-link">
                     Blog
                 </a>
-                <a href="socials" class="block py-2 nav-link">
+                <a href="../socials/index.html" class="block py-2 nav-link">
                     Contact Me
                 </a>
                 <a href="mailto:kc@thewizardofaws.net" class="block py-2 email-link flex items-center gap-2">
@@ -133,16 +133,199 @@
     <main class="flex-grow">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
             
+<!-- Projects Header -->
 <header class="mb-16 text-center">
     <h1 class="text-4xl sm:text-5xl font-bold mb-4" style="color: var(--color-text-primary); font-family: var(--font-heading);">
-        Resources
+        Portfolio
     </h1>
+    <p class="text-lg text-muted max-w-2xl mx-auto">
+        Deep dives into technical repositories and architectures built for the AWS community.
+    </p>
 </header>
 
-<section class="max-w-3xl mx-auto">
-    <p class="text-lg text-muted mb-6">
-        Content coming soon...
-    </p>
+<!-- Projects Grid -->
+<section class="projects-grid">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1: AWS Cost Estimator -->
+        <article class="project-card">
+            <div class="project-header mb-4">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                    AWS Cost Estimator
+                </h2>
+                <p class="text-base text-muted leading-relaxed">
+                    A comprehensive tool for estimating AWS infrastructure costs across multiple services. Helps teams make informed decisions about resource allocation and budget planning.
+                </p>
+            </div>
+            
+            <div class="project-tech-tags mb-6">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Terraform</span>
+                <span class="tech-tag">AWS</span>
+            </div>
+            
+            <div class="project-footer">
+                <a href="https://github.com/thewizardofaws/aws-cost-estimator" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn-github">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 2: Terraform AWS Modules -->
+        <article class="project-card">
+            <div class="project-header mb-4">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                    Terraform AWS Modules
+                </h2>
+                <p class="text-base text-muted leading-relaxed">
+                    Reusable Terraform modules for common AWS infrastructure patterns. Production-ready modules following AWS best practices and security standards.
+                </p>
+            </div>
+            
+            <div class="project-tech-tags mb-6">
+                <span class="tech-tag">Terraform</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">IaC</span>
+            </div>
+            
+            <div class="project-footer">
+                <a href="https://github.com/thewizardofaws/terraform-aws-modules" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn-github">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 3: Serverless Framework Templates -->
+        <article class="project-card">
+            <div class="project-header mb-4">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                    Serverless Framework Templates
+                </h2>
+                <p class="text-base text-muted leading-relaxed">
+                    Production-ready Serverless Framework templates for common serverless patterns. Includes API Gateway, Lambda, DynamoDB, and event-driven architectures.
+                </p>
+            </div>
+            
+            <div class="project-tech-tags mb-6">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Serverless</span>
+            </div>
+            
+            <div class="project-footer">
+                <a href="https://github.com/thewizardofaws/serverless-templates" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn-github">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 4: AWS CLI Utilities -->
+        <article class="project-card">
+            <div class="project-header mb-4">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                    AWS CLI Utilities
+                </h2>
+                <p class="text-base text-muted leading-relaxed">
+                    A collection of Python scripts and CLI tools for automating common AWS operations. Includes utilities for resource management, cost analysis, and security auditing.
+                </p>
+            </div>
+            
+            <div class="project-tech-tags mb-6">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">CLI</span>
+            </div>
+            
+            <div class="project-footer">
+                <a href="https://github.com/thewizardofaws/aws-cli-utilities" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn-github">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 5: CloudFormation Templates -->
+        <article class="project-card">
+            <div class="project-header mb-4">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                    CloudFormation Templates
+                </h2>
+                <p class="text-base text-muted leading-relaxed">
+                    Well-architected CloudFormation templates for deploying AWS infrastructure. Includes VPCs, security groups, IAM roles, and multi-tier application stacks.
+                </p>
+            </div>
+            
+            <div class="project-tech-tags mb-6">
+                <span class="tech-tag">CloudFormation</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">YAML</span>
+            </div>
+            
+            <div class="project-footer">
+                <a href="https://github.com/thewizardofaws/cloudformation-templates" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn-github">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </article>
+
+        <!-- Project 6: AWS Security Scanner -->
+        <article class="project-card">
+            <div class="project-header mb-4">
+                <h2 class="text-2xl font-bold mb-2" style="color: var(--color-text-primary); font-family: var(--font-heading);">
+                    AWS Security Scanner
+                </h2>
+                <p class="text-base text-muted leading-relaxed">
+                    Automated security scanning tool for AWS environments. Identifies misconfigurations, compliance issues, and security best practice violations.
+                </p>
+            </div>
+            
+            <div class="project-tech-tags mb-6">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Security</span>
+            </div>
+            
+            <div class="project-footer">
+                <a href="https://github.com/thewizardofaws/aws-security-scanner" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="btn-github">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </article>
+    </div>
 </section>
 
         </div>
